@@ -31,6 +31,7 @@ class HashTable:
                     return True
         return False
 
+
 table = HashTable(10)
 table.insert('car', 10)
 table.insert('motorcycle', 20)
@@ -40,7 +41,7 @@ print(table.search('cycle'))
 table.delete("motorcycle")
 print(table.search('motorcycle'))
 print(table.search('plane'))
-print(table.search('car'))
+
 
 
 

@@ -10,7 +10,7 @@ class HashTable:
 
     def insert(self, key, value):
 
-        if self.count >= self.size * 0.7:
+        if self.count >= self.size * 1:
             self._resize()
 
         hash_index = self._hash_function(key)
@@ -66,15 +66,22 @@ class HashTable:
 
         return "\n".join(f"{i}: {bucket}" for i, bucket in enumerate(self.table))
 
-ht = HashTable(size=2)
+ht = HashTable(size=5)
 
 ht.insert("a", 1)
 ht.insert("b", 2)
+ht.insert("c", 3)
+ht.insert("d", 4)
+ht.insert("e", 5)
 print("Before resize:")
 print(ht)
 print("Size:", ht.size)
 
-ht.insert("c", 3)
+ht.insert("f", 6)
+ht.insert("g", 7)
+ht.insert("h", 8)
+ht.insert("k", 9)
+ht.insert("l", 10)
 print("\nAfter resize:")
 print(ht)
 print("Size:", ht.size)
